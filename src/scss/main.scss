@@ -1,0 +1,29 @@
+//base
+@import "vars";
+@import "utils";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+//components
+@import "./components/header";
+@import "./components/gradients";
+@import "./components/buttons";
+@import "./components/titles";
+@import "./components/footer";
+
+
+//sections
+@import "./sections/hero";
+@import "./sections/grown";
+@import "./sections/benefits";
+@import "./sections/visit";
+@import "./sections/gallery";
+@import "./sections/promo";
+@import "./sections/about";
+@import "./sections/more";
+@import "./sections/subscription";
+@import "./sections/steps";
+@import "./sections/deliver";
+@import "./sections/package";
+

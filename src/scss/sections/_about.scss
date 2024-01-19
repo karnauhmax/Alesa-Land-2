@@ -1,0 +1,81 @@
+.about {
+  background-color: #F2F7F4;
+  &__inner {
+    gap: 30px;
+
+    @media screen and (max-width: 576px) {
+      column-gap: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 55px;
+  }
+
+  &__img {
+    grid-column: span 5;
+
+    @media screen and (max-width: 1400px) {
+      grid-column: span 4;
+    }
+
+    @media screen and (max-width: 1199px) {
+      grid-column: span 12;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+
+    }
+  }
+
+  &__list {
+    grid-column: span 7;
+    gap: 20px;
+
+    @media screen and (max-width: 1400px) {
+      grid-column: span 8;
+    }
+
+    @media screen and (max-width: 1199px) {
+      grid-column: span 12;
+    }
+  }
+
+  &__item {
+    --icon-size: 88px;
+
+    display: grid;
+    grid-template-columns: var(--icon-size) 1fr;
+    gap: 20px;
+    align-items: center;
+
+
+    @media screen and (max-width: 1400px) {
+      --icon-size: 54px;
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 400px) {
+      --icon-size: 36px;
+
+    }
+
+    &::before {
+      content: "";
+      width: var(--icon-size);
+      height: var(--icon-size);
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-image: url('../img/icons/checkmark-gradient-secondary.svg');
+      background-size: contain;
+    }
+
+  }
+}

@@ -1,0 +1,147 @@
+.benefits {
+  padding: var(--section-offset) 0;
+
+  &__inner {
+    row-gap: var(--section-offset);
+  }
+
+  &__list {
+    gap: 110px;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1400px) {
+      gap: 48px;
+    }
+
+    @media screen and (max-width: 992px) {
+      max-width: 735px;
+    }
+
+    @media screen and (max-width: 576px) {
+      justify-content: start;
+      gap: 20px;
+    }
+  }
+
+  &__head {
+    row-gap: 60px;
+
+    @media screen and (max-width: 576px) {
+      row-gap: 30px;
+    }
+  }
+
+  &__item {
+    --icon-size: 88px;
+    display: grid;
+    grid-auto-rows: min-content;
+    justify-items: center;
+    row-gap: 28px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 154px;
+
+
+
+    @media screen and (max-width: 576px) {
+      flex-basis: 100%;
+      justify-items: start;
+      grid-template-columns: var(--icon-size) 1fr;
+      gap: 15px;
+    }
+
+    @media screen and (max-width: 360px) {
+      --icon-size: 60px;
+    }
+
+    &::before {
+      content: "";
+      width: var(--icon-size);
+      height: var(--icon-size);
+      padding: 5px;
+      border-radius: 50%;
+      background-image: var(--gradient-primary);
+      background-repeat: no-repeat;
+
+      @media screen and (max-width: 360px) {
+        width: 60px;
+        height: 60px;
+        background-size: 40px, cover;
+      }
+    }
+  }
+
+  &__item--location::before {
+    background-image: url("../img/icons/location.svg"), var(--gradient-primary);
+    background-position: center center;
+  }
+
+  &__item--delivery::before {
+    background-image: url("../img/icons/car.svg"), var(--gradient-primary);
+    background-position: center center;
+  }
+
+  &__item--pesticide::before {
+    background-image: url("../img/icons/leaf.svg"), var(--gradient-primary);
+    background-position: center center;
+  }
+
+  &__item--vitamins::before {
+    background-image: url("../img/icons/dna.svg"), var(--gradient-primary);
+    background-position: center center;
+  }
+
+  &__item--delicious::before {
+    background-image: url("../img/icons/thumb-up.svg"), var(--gradient-primary);
+    background-position: center center;
+  }
+
+  &__item--extended {
+    flex-basis: 230px;
+
+    @media screen and (max-width: 992px) {
+      flex-basis: 174px;
+    }
+
+    @media screen and (max-width: 576px) {
+      flex-basis: 100%;
+    }
+  }
+
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: var(--text-subtitle);
+    text-align: center;
+    font-weight: 500;
+
+    @media screen and (max-width: 576px) {
+      align-self: center;
+      text-align: start;
+    }
+  }
+
+  &__btn {
+    justify-self: center;
+    width: 100%;
+  }
+
+  &__logo {
+    padding-bottom: 20px;
+
+
+    @media screen and (max-width: 992px) {
+      flex: unset;
+
+      img {
+        max-width: 205px;
+      }
+    }
+
+
+  }
+
+
+
+}

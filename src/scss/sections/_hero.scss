@@ -1,0 +1,114 @@
+@use 'sass:color';
+
+.hero {
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100svh - var(--header-height));
+  background-image: url('../img/content/hero.webp');
+  background-color: var(--color-primary-darker);
+  padding: 85px 0 174px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media screen and (max-width: 1400px) {
+    padding: 99px 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 63px 0;
+  }
+
+  &__head {
+    row-gap: 20px;
+
+    @media screen and (max-width: 992px) {
+      row-gap: 16px;
+    }
+  }
+
+  &__note {
+    margin-bottom: 20px;
+
+    @media screen and (max-width: 576px) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__title {
+    line-height: 1;
+  }
+
+  &__description {
+    max-width: 602px;
+    line-height: var(--leading-secondary);
+
+    @media screen and (max-width: 1400px) {
+      max-width: 457px;
+    }
+
+    @media screen and (max-width: 992px) {
+      max-width: 379px;
+    }
+  }
+
+  &__info {
+    padding: 70px 60px;
+    row-gap: 84px;
+    max-width: 846px;
+    background-color: var(--color-primary-darker-transparent);
+
+    @media screen and (max-width: 1400px) {
+      padding: 60px;
+      max-width: 635px;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding: 40px 40px 40px 40px;
+      max-width: 482px;
+      row-gap: 50px;
+    }
+
+    @media screen and (max-width: 576px) {
+      max-width: unset;
+      padding: 20px;
+    }
+  }
+
+  &__footer {
+    row-gap: 20px;
+
+    @media screen and (max-width: 1400px) {
+      row-gap: 16px;
+    }
+  }
+
+  &__btn {
+    max-width: 594px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (max-width: 576px) {
+      gap: 5px;
+    }
+
+    &::before {
+      content: "";
+      flex: 0 0 50px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-image: url('../img/icons/checkmark-in-cirlce.svg');
+      align-self: start;
+      background-size: contain;
+      @media screen and (max-width: 576px) {
+        flex: 0 0 35px;
+        height: 35px;
+
+      }
+    }
+  }
+}

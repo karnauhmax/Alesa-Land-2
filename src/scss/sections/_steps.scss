@@ -1,0 +1,151 @@
+.steps {
+  background-color: #F2F7F4;
+  padding-bottom: 240px;
+
+  @media screen and (max-width: 992px) {
+    padding-bottom: 180px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-bottom: 150px;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-bottom: var(--section-offset);
+  }
+
+  &__title {
+    margin-bottom: 60px;
+
+    @media screen and (max-width: 1400px) {
+      text-align: center;
+    }
+  }
+
+  --list-gap: 30px;
+
+  &__list {
+    gap: clamp(0.938rem, -3.75rem + 4.69vw, 1.875rem);
+    flex-wrap: wrap;
+    counter-reset: counter;
+
+    @media screen and (max-width: 1610px) {
+      max-width: 1200px;
+      margin: 0 auto;
+
+    }
+
+    @media screen and (max-width: 1400px) {
+      max-width: 1200px;
+      gap: var(--list-gap);
+    }
+
+    @media screen and (max-width: 992px) {
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 767px) {
+      --list-gap: 20px;
+    }
+  }
+
+  &__wrapper {
+    row-gap: 15px;
+    position: relative;
+  }
+
+  &__wrapper,
+  &__item {
+    flex: 0 1 240px;
+
+    @media screen and (max-width: 992px) {
+      flex: 0 1 210px;
+    }
+
+    @media screen and (max-width: 767px) {
+      flex: 0 1 calc(50% - var(--list-gap));
+    }
+
+    @media screen and (max-width: 576px) {
+      flex: 0 1 100%;
+    }
+
+  }
+
+  &__item {
+    display: grid;
+    row-gap: 67px;
+    position: relative;
+    padding: 121px 20px 30px 30px;
+    min-height: 244px;
+    position: relative;
+
+    @media screen and (max-width: 992px) {
+      min-height: 218px;
+      padding: 121px 20px 20px 20px;
+    }
+
+    @media screen and (max-width: 576px) {
+      min-height: 150px;
+      padding-top: 80px;
+    }
+  }
+
+  &__note {
+    row-gap: 12px;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(115%);
+
+    @media screen and (max-width: 576px) {
+      position: static;
+      transform: unset;
+      max-width: 330px;
+    }
+
+
+    &::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-image: url('../img/icons/notice.svg');
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    padding: 0 15px 0 30px;
+
+    @media screen and (max-width: 576px) {
+      padding-left: 20px;
+    }
+
+    &::before {
+      content: "STEP " counter(counter);
+      counter-increment: counter;
+      font-weight: 500;
+      font-size: var(--text-subtitle);
+    }
+
+    &::after {
+      content: "";
+      flex: 0 0 56px;
+      height: 56px;
+      background-repeat: no-repeat;
+      background-image: url('../img/icons/arrow-in-circle.svg');
+      background-size: contain;
+      background-position: center center;
+      @media screen and (max-width: 576px) {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+}

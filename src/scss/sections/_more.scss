@@ -1,0 +1,45 @@
+.more {
+
+  background-image: url('../img/content/docks.webp');
+  min-height: 643px;
+  display: grid;
+  align-items: end;
+  padding: 80px 0;
+  background-position: right center;
+
+  @media screen and (max-width: 576px) {
+    background-image: url('../img/content/docks-mobile.webp');
+    background-position: center center;
+  }
+
+  @media screen and (max-width: 1400px) {
+    padding: 60px 0;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 40px 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 20px 0;
+  }
+
+  &__item {
+    row-gap: 30px;
+    padding: 40px;
+    max-width: 753px;
+
+    @media screen and (max-width: 1400px) {
+      max-width: 540px;
+    }
+
+    @media screen and (max-width: 576px) {
+      row-gap: 20px;
+      padding: 20px;
+    }
+  }
+
+  &__btn {
+    max-width: 430px;
+  }
+}

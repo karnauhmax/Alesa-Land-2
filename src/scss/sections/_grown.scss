@@ -1,0 +1,63 @@
+.grown {
+  background-image: url('../img/content/green-bg.jpg');
+  padding: var(--section-offset) 0;
+
+
+  &__inner {
+    row-gap: 60px;
+
+    @media screen and (max-width: 992px) {
+      row-gap: 40px;
+    }
+  }
+
+  &__item {
+    --icon-size: 56px;
+    display: grid;
+    grid-template-columns: var(--icon-size) 1fr;
+    align-items: center;
+    position: relative;
+    gap: 20px;
+    padding: var(--padding-item-md);
+    background: rgba(255, 255, 255, 0.10);
+
+    @media screen and (max-width: 576px) {
+      --icon-size: 40px;
+      gap: 10px;
+    }
+
+    &::before {
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+      grid-column: 1/2;
+      grid-row: 1/3;
+      width: var(--icon-size);
+      height: var(--icon-size);
+      background-image: url('../img/icons/checkmark-gradient.svg');
+      align-self: start;
+    }
+  }
+
+  &__subtitle {
+    grid-column: 2/3;
+  }
+
+  &__content {
+    max-width: 1050px;
+    row-gap: 20px;
+  }
+
+  &__list {
+    row-gap: 20px;
+  }
+
+  &__note {
+    padding: 30px;
+  }
+
+  &__note-title {
+    max-width: 910px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,45 @@
+.promo {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  background-image: url('../img/content/green-plants.webp');
+  padding: 80px 0;
+
+  @media screen and (max-width: 576px) {
+    padding: 40px 0;
+  }
+
+  &__info {
+    max-width: 780px;
+    padding: 70px 60px;
+    row-gap: 78px;
+
+    @media screen and (max-width: 1400px) {
+      max-width: 612px;
+      padding: 60px;
+      row-gap: 50px;
+    }
+
+    @media screen and (max-width: 992px) {
+      max-width: 490px;
+      padding: 40px;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding: 20px;
+      row-gap: 28px;
+    }
+  }
+
+  &__head {
+    row-gap: 30px;
+
+    @media screen and (max-width: 992px) {
+     row-gap: 20px;
+    }
+  }
+
+  &__description {
+    max-width: 402px;
+  }
+}

@@ -1,0 +1,50 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 21px 0;
+  z-index: 5;
+
+  &__menu {
+    max-width: 480px;
+
+  }
+
+  &__list {
+    column-gap: 15px;
+  }
+
+  &__link {
+    position: relative;
+    padding-bottom: 2px;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+
+      width: 0px;
+      height: 2px;
+
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+
+      transition-property: width;
+      transition-duration: var(--transition-duration);
+      transition-timing-function: var(--transition-timing-function);
+
+      background-color: var(--color-primary);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,45 @@
+
+.deliver {
+  &__inner {
+    min-height: 646px;
+    background-image: url('../img/content/lake.jpg');
+  }
+
+  @media screen and (max-width: 1400px) {
+    min-height: 545px;
+  }
+
+  &__item {
+    display: flex;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+
+  }
+
+
+  &__text {
+    --flex-basis: 740px;
+    padding: 30px;
+    background-color: var(--color-primary-darker-transparent);
+    flex: 0 1 var(--flex-basis);
+    line-height: var(--leading-secondary);
+
+    @media screen and (max-width: 1400px) {
+      --flex-basis: 640px;
+    }
+
+    @media screen and (max-width: 992px) {
+      flex: unset;
+    }
+  }
+
+  &__container {
+    @media screen and (max-width: 576px) {
+      padding: 0px;
+    }
+  }
+
+}
+
