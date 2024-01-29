@@ -25,14 +25,15 @@
   --list-gap: 30px;
 
   &__list {
-    gap: clamp(0.938rem, -3.75rem + 4.69vw, 1.875rem);
-    flex-wrap: wrap;
+    gap: var(--list-gap);
     counter-reset: counter;
 
     @media screen and (max-width: 1610px) {
-      max-width: 1200px;
       margin: 0 auto;
+    }
 
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
     }
 
     @media screen and (max-width: 1400px) {
@@ -47,23 +48,37 @@
     @media screen and (max-width: 767px) {
       --list-gap: 20px;
     }
+
+    @media screen and (max-width: 576px) {
+      --list-gap: 10px;
+    }
   }
 
   &__wrapper {
-    row-gap: 15px;
+    row-gap: 10px;
     position: relative;
   }
 
-  &__wrapper,
-  &__item {
-    flex: 0 1 240px;
+  &__wrapper:last-child {
+    .steps__head::after {
+      display: none;
+    }
+  }
 
-    @media screen and (max-width: 992px) {
-      flex: 0 1 210px;
+  &__wrapper {
+    flex: 1 1 240px;
+    min-height: 100%;
+
+    @media screen and (max-width: 1610px) {
+      flex: 1 0 160px;
+    }
+
+    @media screen and (max-width: 1999px) {
+      flex: 1 1 calc(33% - var(--list-gap));
     }
 
     @media screen and (max-width: 767px) {
-      flex: 0 1 calc(50% - var(--list-gap));
+      flex: 1 1 calc(50% - var(--list-gap));
     }
 
     @media screen and (max-width: 576px) {
@@ -73,12 +88,16 @@
   }
 
   &__item {
+    height: 100%;
     display: grid;
     row-gap: 67px;
     position: relative;
-    padding: 121px 20px 30px 30px;
-    min-height: 244px;
+    padding: 121px 20px 20px 20px;
     position: relative;
+
+    @media screen and (max-width: 1610px) {
+      // padding: 121px 20px 20px 20px;
+    }
 
     @media screen and (max-width: 992px) {
       min-height: 218px;
@@ -86,6 +105,7 @@
     }
 
     @media screen and (max-width: 576px) {
+      height: initial;
       min-height: 150px;
       padding-top: 80px;
     }
@@ -103,6 +123,17 @@
       max-width: 330px;
     }
 
+    @media screen and (max-width: 1610px) {
+      p {
+        min-width: 300px;
+      }
+    }
+
+    @media screen and (max-width: 1199px) {
+      p {
+        min-width: initial;
+      }
+    }
 
     &::before {
       content: "";
@@ -121,7 +152,8 @@
     position: absolute;
     top: 15px;
     width: 100%;
-    padding: 0 15px 0 30px;
+    min-height: 56px;
+    padding: 0 15px 0 20px;
 
     @media screen and (max-width: 576px) {
       padding-left: 20px;
@@ -132,6 +164,10 @@
       counter-increment: counter;
       font-weight: 500;
       font-size: var(--text-subtitle);
+
+      @media screen and (max-width: 1610px) {
+        font-size: 16px;
+      }
     }
 
     &::after {
@@ -142,10 +178,17 @@
       background-image: url('../img/icons/arrow-in-circle.svg');
       background-size: contain;
       background-position: center center;
+
       @media screen and (max-width: 576px) {
         width: 44px;
         height: 44px;
       }
+    }
+  }
+
+  &__description {
+    @media screen and (max-width: 1610px) {
+      font-size: 16px;
     }
   }
 }
