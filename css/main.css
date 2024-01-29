@@ -1036,8 +1036,8 @@ a {
   }
 }
 .gallery__img {
-  -ms-grid-column-span: 5;
-  grid-column: span 5;
+  -ms-grid-column-span: 4;
+  grid-column: span 4;
 }
 .gallery__img img {
   width: 100%;
@@ -1050,8 +1050,8 @@ a {
   }
 }
 .gallery__img--extended {
-  -ms-grid-column-span: 7;
-  grid-column: span 7;
+  -ms-grid-column-span: 8;
+  grid-column: span 8;
   -ms-grid-row-span: 2;
   grid-row: span 2;
 }
