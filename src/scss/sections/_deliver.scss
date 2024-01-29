@@ -1,14 +1,15 @@
-
 .deliver {
   &__inner {
     min-height: 646px;
-    background-image: url('../img/content/lake.webp');
-      @media screen and (max-width: 1400px) {
-        min-height: 545px;
-      }
-      @media screen and (max-width: 576px) {
-        background-image: url('../img/content/lake-mobile.webp');
-      }
+    background-image: url('../img/content/worker.webp');
+
+    @media screen and (max-width: 1400px) {
+      min-height: 545px;
+    }
+
+    @media screen and (max-width: 576px) {
+      background-image: url('../img/content/worker-mobile.webp');
+    }
   }
 
 
@@ -47,4 +48,3 @@
   }
 
 }
-
