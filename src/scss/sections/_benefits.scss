@@ -42,8 +42,6 @@
     flex-shrink: 1;
     flex-basis: 154px;
 
-
-
     @media screen and (max-width: 576px) {
       flex-basis: 100%;
       justify-items: start;
@@ -109,7 +107,6 @@
     }
   }
 
-
   &__subtitle {
     text-transform: uppercase;
     font-size: var(--text-subtitle);
@@ -129,19 +126,24 @@
 
   &__logo {
     padding: 20px 45px;
+    max-width: 192px;
+    @media screen and (max-width: 1400px) {
+      padding: 18px 39px 16px 33px;
 
+      img {
+        max-width: 110px;
+      }
+    }
 
     @media screen and (max-width: 992px) {
       flex: unset;
 
+      max-width: 150px;
+      padding: 14px 31px 11px 24px;
+
       img {
-        max-width: 205px;
+        max-width: 76px;
       }
     }
-
-
   }
-
-
-
 }
