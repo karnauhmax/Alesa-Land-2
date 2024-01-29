@@ -16,13 +16,21 @@
   }
 
   &__list {
-    column-gap: 15px;
+    gap: 15px;
+    justify-content: center;
   }
 
   &__link {
     position: relative;
     padding-bottom: 2px;
-    color: var(--color-light);
+    color: var(--color-primary);
+
+    @media screen and (max-width: 767px) {
+      color: var(--color-light);
+      text-transform: uppercase;
+      font-weight: 600;
+      // white-space: nowrap;
+    }
 
     &::after {
       content: "";
