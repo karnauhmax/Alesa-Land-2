@@ -37,7 +37,7 @@
   }
 
   &__img {
-    grid-column: span 5;
+    grid-column: span 4;
 
     img {
       width: 100%;
@@ -52,7 +52,7 @@
   }
 
   &__img--extended {
-    grid-column: span 7;
+    grid-column: span 8;
     grid-row: span 2;
 
     @media screen and (max-width: 768px) {
