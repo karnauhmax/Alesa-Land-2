@@ -994,15 +994,26 @@ a {
 }
 .benefits__logo {
   padding: 20px 45px;
+  max-width: 192px;
+}
+@media screen and (max-width: 1400px) {
+  .benefits__logo {
+    padding: 18px 39px 16px 33px;
+  }
+  .benefits__logo img {
+    max-width: 110px;
+  }
 }
 @media screen and (max-width: 992px) {
   .benefits__logo {
     -webkit-box-flex: unset;
     -ms-flex: unset;
     flex: unset;
+    max-width: 150px;
+    padding: 14px 31px 11px 24px;
   }
   .benefits__logo img {
-    max-width: 205px;
+    max-width: 76px;
   }
 }
 
@@ -1616,6 +1627,9 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
   }
 }
 .deliver__text {
