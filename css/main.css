@@ -982,7 +982,7 @@ a {
   width: 100%;
 }
 .benefits__logo {
-  padding-bottom: 20px;
+  padding: 20px 45px;
 }
 @media screen and (max-width: 992px) {
   .benefits__logo {
