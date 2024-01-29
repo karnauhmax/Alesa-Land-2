@@ -326,6 +326,11 @@ li {
     font-size: 16px;
   }
 }
+@media screen and (max-width: 767px) {
+  .page__body {
+    padding-top: 0;
+  }
+}
 
 img {
   height: auto;
@@ -401,6 +406,11 @@ a {
   padding: 21px 0;
   z-index: 5;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    background-color: rgba(18, 39, 36, 0.36);
+  }
+}
 .header__menu {
   max-width: 480px;
 }
@@ -412,6 +422,7 @@ a {
 .header__link {
   position: relative;
   padding-bottom: 2px;
+  color: var(--color-light);
 }
 .header__link::after {
   content: "";
