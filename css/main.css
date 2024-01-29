@@ -1526,7 +1526,7 @@ a {
 
 .deliver__inner {
   min-height: 646px;
-  background-image: url("../img/content/lake.webp");
+  background-image: url("../img/content/worker.webp");
 }
 @media screen and (max-width: 1400px) {
   .deliver__inner {
@@ -1535,7 +1535,7 @@ a {
 }
 @media screen and (max-width: 576px) {
   .deliver__inner {
-    background-image: url("../img/content/lake-mobile.webp");
+    background-image: url("../img/content/worker-mobile.webp");
   }
 }
 .deliver__item {
