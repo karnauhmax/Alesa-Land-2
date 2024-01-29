@@ -12,12 +12,15 @@
 
   &__menu {
     max-width: 480px;
-
   }
 
   &__list {
     gap: 15px;
-    justify-content: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 360px) {
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -35,7 +38,6 @@
     &::after {
       content: "";
       position: absolute;
-
 
       width: 0px;
       height: 2px;
@@ -58,6 +60,5 @@
         }
       }
     }
-
   }
 }
