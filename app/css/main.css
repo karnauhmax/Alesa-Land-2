@@ -1401,7 +1401,7 @@ a {
 }
 
 .steps {
-  background-color: #F2F7F4;
+  background-color: #f2f7f4;
   padding-bottom: 240px;
   --list-gap: 30px;
 }
@@ -1514,7 +1514,7 @@ a {
   padding: 121px 20px 20px 20px;
   position: relative;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .steps__item {
     min-height: 218px;
     padding: 121px 20px 20px 20px;

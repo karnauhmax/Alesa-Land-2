@@ -1,5 +1,5 @@
 .steps {
-  background-color: #F2F7F4;
+  background-color: #f2f7f4;
   padding-bottom: 240px;
 
   @media screen and (max-width: 992px) {
@@ -84,7 +84,6 @@
     @media screen and (max-width: 576px) {
       flex: 0 1 100%;
     }
-
   }
 
   &__item {
@@ -95,11 +94,7 @@
     padding: 121px 20px 20px 20px;
     position: relative;
 
-    @media screen and (max-width: 1610px) {
-      // padding: 121px 20px 20px 20px;
-    }
-
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 1200px) {
       min-height: 218px;
       padding: 121px 20px 20px 20px;
     }
@@ -140,7 +135,7 @@
       width: 30px;
       height: 30px;
       background-repeat: no-repeat;
-      background-image: url('../img/icons/notice.svg');
+      background-image: url("../img/icons/notice.svg");
     }
   }
 
@@ -175,7 +170,7 @@
       flex: 0 0 56px;
       height: 56px;
       background-repeat: no-repeat;
-      background-image: url('../img/icons/arrow-in-circle.svg');
+      background-image: url("../img/icons/arrow-in-circle.svg");
       background-size: contain;
       background-position: center center;
 
